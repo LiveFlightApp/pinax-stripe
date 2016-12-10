@@ -33,6 +33,7 @@ class Plan(StripeObject):
     name = models.CharField(max_length=150)
     statement_descriptor = models.TextField(blank=True)
     trial_period_days = models.IntegerField(null=True)
+    itunes_id = models.CharField(max_length=50, blank=True, null=True)
     metadata = JSONField(null=True)
 
     def __str__(self):
